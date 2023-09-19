@@ -492,6 +492,23 @@ main > div{
     bottom: -300px;
  }
 
+ @media screen and (max-width: 768px) {
+    .categories {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .cat-item ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .cat-item ul li .icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
  /* .....................
  *  04. Tabbed products
  *  ..................*/
@@ -612,6 +629,18 @@ main > div{
     width: fit-content!important;
  }
 
+ @media screen and (max-width: 768px) {
+    .tabbed nav ul li {
+        margin-right: 0; /* Remove margin for smaller screens */
+        width: 100%; /* Make tabs take up full width */
+    }
+
+    .tabbed .products ul {
+        grid-gap: 1%; /* Reduce grid gap for smaller screens */
+    }
+
+}
+
  /* .....................
  *  05. Masterpiece
  *  ..................*/
@@ -675,6 +704,25 @@ main > div{
     color: var(--secondary-color);
     background-color: #ff25250d;
  }
+
+ @media screen and (max-width: 768px) {
+    .masterpiece .bg-dark {
+        top: -200px; /* Adjust the position of the background */
+        height: 200px; /* Adjust the height of the background */
+    }
+
+    .masterpiece .item {
+        padding: 2em 0; /* Reduce padding for smaller screens */
+    }
+
+    .masterpiece .item .image {
+        max-width: 50%; /* Adjust image width for smaller screens */
+    }
+
+    .masterpiece .item .text {
+        padding: 1em 0; /* Reduce top padding for smaller screens */
+    }
+}
 
   /* -------------------
      06. FOOTER
@@ -741,10 +789,30 @@ main > div{
     margin-top: 5em;
  }
 
+ @media screen and (max-width: 768px) {
+    footer .wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width for smaller screens */
+    }
+
+    footer h4 {
+        font-size: 1.2em; 
+    }
+
+    footer .logo a {
+        font-size: 1.2em;
+    }
+
+    footer .socials li a {
+        font-size: 1em; 
+        width: 32px; 
+        height: 32px; 
+    }
+}
+
  /* -------------------------
   *  07. ON SCROLL ANIMATION
   * ---------------------- */
-/*  .up.animate{
+ /* .up.animate{
     transform: translateY(150px);
   }
   .left.animate{
@@ -818,11 +886,7 @@ main > div{
         flex-direction: row-reverse;
     }
 
-    .masterpiece .item:nth-child(4){
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
+   
 }
 
 
