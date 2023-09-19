@@ -744,7 +744,7 @@ main > div{
  /* -------------------------
   *  07. ON SCROLL ANIMATION
   * ---------------------- */
- .up.animate{
+/*  .up.animate{
     transform: translateY(150px);
   }
   .left.animate{
@@ -752,7 +752,7 @@ main > div{
   }
   .right.animate{
     transform: translateX(100px);
-  }  */
+  } 
   :where(.up, .left, .right).animate > *{
     opacity: 0;
     transition: transform 1s 1s, opacity 1s 1s ;
@@ -775,7 +775,7 @@ main > div{
   }
   :where(.up, .left, .right).animate.this > *:nth-child(6){
     transition-delay: 1.7s;
-  }
+  } */
 
 @media screen and (min-width: 768px){
     .mobile-only{
