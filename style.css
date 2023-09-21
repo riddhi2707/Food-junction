@@ -881,15 +881,10 @@ main > div{
     .masterpiece .item >div{
         flex: 1 0 50%;
     }
-
     .masterpiece .item:nth-child(even){
         flex-direction: row-reverse;
     }
-
-   
 }
-
-
 @media screen and (min-width: 992px) {
     .slider .thumb-nav {
         position: absolute;
@@ -904,6 +899,4 @@ main > div{
         display: block;
     }
 }
-
-
 
