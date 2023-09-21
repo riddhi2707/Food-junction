@@ -69,8 +69,21 @@ const theTab = new Swiper('.tabbed-item', {
     autoHeight: true,
     thumbs: {
         swiper: tabbednav,
-    }
-    
+    }   
+});
+
+const categoryLinks = document.querySelectorAll('.categories .cat-item a.link');
+categoryLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        const targetCategoryId = link.getAttribute('href'); // Get the category ID from the link's href attribute
+        const targetCategoryElement = document.querySelector(targetCategoryId);
+
+        if (targetCategoryElement) {
+            // Use JavaScript to scroll to the target category
+            targetCategoryElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 });
 
 // ......... ON SCROLL TRANSITION
